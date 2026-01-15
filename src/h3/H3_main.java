@@ -2,7 +2,13 @@ package h3;
 
 public class H3_main {
 	public static void main(String[] args) {
+		int[] array = {1,6,9,5,4};
 		
+		array = mergeSort(array);
+		
+		for (int i = 0; i < array.length; i++) {
+			System.out.println(array[i]);
+		}
 	}
 	
 	public static int[] mergeSort(int[] array) {
@@ -35,7 +41,7 @@ public class H3_main {
 		int i = 0, j = 0, k = 0;
 		
 		while(i < left.length && j < right.length) {
-			if(left[i] <= right[i]) {
+			if(left[i] <= right[j]) {
 				merged[k] = left[i];
 				i++;
 				k++;
